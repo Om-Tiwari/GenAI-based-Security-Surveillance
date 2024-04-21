@@ -2,7 +2,7 @@ import serial
 import cv2
 
 # Establish serial connection with Arduino
-ser = serial.Serial('COM7', 9600)  # Replace 'COM7' with the appropriate port for your Arduino
+ser = serial.Serial('COM7', 9600)
 
 
 while True:
@@ -21,5 +21,3 @@ while True:
                 # Save the captured frame as an image
                 cv2.imwrite("cap.jpg", frame)
                 cap.release()
-
-print("Work Ended")

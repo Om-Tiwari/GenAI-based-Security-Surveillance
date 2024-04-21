@@ -3,10 +3,11 @@ import requests
 import numpy as np
 import cv2
 
-# Establish serial connection with Arduino
-ser = serial.Serial('COM7', 9600)  # Replace 'COM7' with the appropriate port for your Arduino
+# Establish serial connection with Arduino``
+ser = serial.Serial('COM7', 9600)
 
 url = "http://192.0.0.4:8080/shot.jpg"
+
 def captureMobileCam():
     img_resp = requests.get(url) 
     img_arr = np.array(bytearray(img_resp.content), dtype=np.uint8) 
@@ -28,4 +29,3 @@ while True:
 
                 # Save the captured frame as an image
                 cv2.imwrite("cap.jpg", frame)
-    print("Work Ended")
