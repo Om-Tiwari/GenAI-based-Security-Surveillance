@@ -6,6 +6,7 @@ import google.generativeai as genai
 import time
 
 load_dotenv()
+
 os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
@@ -42,6 +43,9 @@ You are an advanced home security system with access to cutting-edge computer vi
 Your analysis and recommendations should be concise, clear, and actionable, focusing on the safety and security of the home and its residents. Remember to prioritize accuracy and objectivity in your assessments, and avoid making assumptions or jumping to conclusions without sufficient evidence.
 """
 
+# input_prompt = """
+# you are the best hightech security suvilliance generative ai ,you are ensuring safety and security .you will recieve input images of visitors ,your task is to identify them that they are humans ,they are suspicious or non suspicious <plz tell us they are suspicious or not on the basis of how much face is covered  if face is covered even little plz considered as suspicious either non suspicious ,or on the basis of  carrying harmful tools if a person is carrying harmful tools then it is considered as suspicious  either non suspicious  > you are also telling the approx height with the help of measurement of the surrounding and using mathmatical theorums  and weight of the person by volume covered and physics theorums .
+# """
 
 st.set_page_config(page_title="nam hi rakhenge")
 st.header("Project ka nam ky rakhe...")
